@@ -1,4 +1,6 @@
 // Initialize i with 1 since we alrdy consider val and count as first element
+// if currEle equal to val then increase count or deacrease count 
+// if it becomes zero then initialize it
 
 var majorityELe = function (arr) {
   let val = arr[0];

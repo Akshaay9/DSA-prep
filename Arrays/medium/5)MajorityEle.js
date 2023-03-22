@@ -1,3 +1,5 @@
+// Initialize i with 1 since we alrdy consider val and count as first element
+
 var majorityELe = function (arr) {
   let val = arr[0];
   let count = 1;

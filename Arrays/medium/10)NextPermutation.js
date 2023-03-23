@@ -22,7 +22,7 @@ const reverseArr = (idex, arr) => {
       }
     }
   
-    // from last to index to check if any element bigger than index then if it is swap it
+    // from last to index to check if any element bigger than index then if it is swap it and break
   
     for (let i = nums.length - 1; i > index; i--) {
       if (nums[i] > nums[index]) {

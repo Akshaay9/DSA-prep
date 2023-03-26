@@ -32,7 +32,7 @@ const reverseArr = (idex, arr) => {
     }
   
     // reverse idx+1 to arr.length-1
-    return nums;
+    return reverseArr(idex+1,nums);
   };
   
   console.log(nextPermutation([1, 3, 2]));

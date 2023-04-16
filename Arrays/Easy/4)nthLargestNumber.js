@@ -24,3 +24,29 @@ const nthLargestNumber = (arr, k) => {
 const arr = [5, 4, 3, 2, 1, 3, 4, 5, 7, 6, 5, 9, 8];
 
 console.log(nthLargestNumber(arr, 3));
+
+//  or or orooror
+
+const nthLargestNumber = (arr, n) => {
+  let largest = -Infinity;
+  let skipMap = new Map();
+
+  while (n--) {
+    for (let i = 0; i < arr.length; i++) {
+      if (skipMap.has(arr[i])) continue;
+      if (arr[i] > largest) {
+        largest = arr[i];
+      }
+    }
+    skipMap.set(largest, true);
+    largest = -Infinity;
+  }
+
+  const skipEle = [...skipMap.keys()];
+  return skipEle[skipEle.length - 1];
+};
+
+const arr = [5, 4, 3, 2, 1, 3, 4, 5, 7, 6, 5, 9, 8];
+
+console.log(nthLargestNumber(arr, 3));
+

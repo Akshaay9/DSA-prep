@@ -1,3 +1,5 @@
+// num * (num+1)/2
+
 var missingNumber = function (nums) {
   const maxNum = nums.length;
   const totalSum = (maxNum * (maxNum + 1)) / 2;

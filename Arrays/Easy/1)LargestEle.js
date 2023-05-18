@@ -10,4 +10,3 @@ const largestELeInTheArray = (arr) => {
     return MAX_ELE;
   };
   console.log(largestELeInTheArray([5, 6, 7, 5, 3, 2]));
-s  

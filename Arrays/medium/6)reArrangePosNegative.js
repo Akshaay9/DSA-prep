@@ -46,6 +46,7 @@ var rearrangeArray = function (nums) {
     for (let i = negativeArr.length; i < positiveArr.length; i++) {
       result[idx] = positiveArr[i];
       idx += 1;
+       //  or  result.push(posArr[i]);
     }
 
     //
@@ -60,6 +61,8 @@ var rearrangeArray = function (nums) {
     for (let i = positiveArr.length; i < negativeArr.length; i++) {
       result[idx] = negativeArr[i];
       idx += 1;
+      // or     result.push(negArr[i]);
+     
     }
   }
 

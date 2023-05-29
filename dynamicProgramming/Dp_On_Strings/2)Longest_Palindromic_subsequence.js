@@ -11,11 +11,10 @@ const recursion = (str1, str2, i, j, str1Len, str2Len, map) => {
     let ans = 0;
     if (charAti === charAtj) {
       ans = 1 + recursion(str1, str2, i + 1, j + 1, str1Len, str2Len, map);
-    } else {
+    } 
       const increaseI = recursion(str1, str2, i + 1, j, str1Len, str2Len, map);
       const increaseJ = recursion(str1, str2, i, j + 1, str1Len, str2Len, map);
       ans = Math.max(increaseI, increaseJ);
-    }
     map[mapKey] = ans;
   
     return ans;

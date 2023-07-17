@@ -1,4 +1,5 @@
-xx
+const arr1 = [1, 3, 4, 5, 7];
+const arr2 = [2, 3, 5, 6];
 
 const unionOfArr = (arr1, arr2) => {
   const result = [];

@@ -43,4 +43,25 @@ const movrZeroesToEnd2 = (arr) => {
   };
   
   console.log(movrZeroesToEnd2([1, 0, 2, 3, 4, 5, 4, 0, 0, 3, 2, 1, 4, 3, 0, 1]));
+
+   // OR OR OR BETTER
+
+   const movrZeroesToEnd = (arr) => {
+    let start = 0;
+    let end = arr.length - 1;
+  
+    while (start <= end) {
+      if (arr[end] === 0) {
+        end -= 1;
+      } else if (arr[start] === 0) {
+        [arr[start], arr[end]] = [arr[end], arr[start]];
+        end -= 1;
+      } else {
+        start += 1;
+      }
+    }
+    return arr;
+  };
+  
+  console.log(movrZeroesToEnd([1, 0, 2, 3, 4, 5, 4, 0, 0, 3, 2, 1, 4, 3, 0, 1]));
   
